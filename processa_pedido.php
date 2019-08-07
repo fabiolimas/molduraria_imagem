@@ -56,6 +56,8 @@
 	$pagamento=$_POST['valor'];
 	$status=$_POST['status_os'];
 	$datacliente=$_POST['datacliente'];
+	$quantidade=$_POST['quantidade'];
+	$cor=$_POST['cor'];
 	
 
 	
@@ -90,7 +92,7 @@ if(strlen($pagamento)==6){
 		exit();
 	}else{
 
-		$processar="INSERT INTO pedido (id_pedido, id_loja, os, cliente,   telefone, email, valor, id_status, data_loja, data_cliente, id_moldura, tam_moldura, id_vidro, id_fundo, id_impressao) VALUES(NULL, '$idloja','$os', '$cliente', '$telefone', '$email','$new_valor','$status', '$dataloja','$datacliente', '$modelo', '$tamanho', '$vidro', '$fundo', '$impressao')";
+		$processar="INSERT INTO pedido (id_pedido, id_loja, os, cliente,   telefone, email, valor, id_status, data_loja, data_cliente, id_moldura, tam_moldura, cor, quantidade, id_vidro, id_fundo, id_impressao) VALUES(NULL, '$idloja','$os', '$cliente', '$telefone', '$email','$new_valor','$status', '$dataloja','$datacliente', '$modelo', '$tamanho', '$cor','$quantidade', '$vidro', '$fundo', '$impressao')";
 	$query_proc=mysqli_query($conecta, $processar);
 
 	if($query_proc){

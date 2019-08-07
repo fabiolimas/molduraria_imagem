@@ -57,6 +57,8 @@ $id=$_GET['id'];
 				 p.data_loja,
 				 p.data_cliente,
 				 m.nome_moldura,
+				 p.cor,
+				 p.quantidade,
 				 p.tam_moldura,
 				 v.nome_vidro,
 				 f.nome_fundo, 
@@ -90,6 +92,8 @@ if($row == 1){
 		$preco=$mostra_pedido['valor'];
 		$data_cliente=isset($mostra_pedido['data_cliente'])?$mostra_pedido['data_cliente']:'';
 		$impressao=$mostra_pedido['nome_impressao'];
+		$cor=$mostra_pedido['cor'];
+		$quantidade=$mostra_pedido['quantidade'];
 		
 
 
@@ -132,6 +136,9 @@ echo"<b>Data Prometida ao Cliente:</b> <span class='red' id='lab'>".date('d-m-Y'
 
 echo"<fieldset><legend>Dados do Moldura</legend><b><br>Modelo:</b> <span class='red'>".$moldura."</span><br><br>";
 echo"<b>Tamanho:</b> <span class='red'>".$tamanho."</span><br><br>";
+echo"<b>Cor:</b> <span class='red'>".$cor."</span><br><br>";
+echo"<b>Quantidade:</b> <span class='red'>".$quantidade."</span><br><br>";
+
 echo "<b>Tipo de Vidro:</b> <span class='red'>".$vidro."</span><br><br>";
 echo "<b>Fundo:</b> <span class='red'>".$fundo."</span><br><br>";
 echo "<b>Tipo de Impressão: </b><span class='red'>".$impressao."</span><br><br>";

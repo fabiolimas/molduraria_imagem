@@ -129,6 +129,9 @@
 			}
 			echo "</select><br><br><br> ";
 		echo"Tamanho: <input type='text' placeholder='Tamanho da Moldura' name='tamanho' required><br><br>";
+		echo"Cor: <input type='text' placeholder='Cor da Moldura' name='cor' required><br><br>";
+		echo"Quantidade: <input type='text'  name='quantidade' required><br><br>";
+
 		
 		echo "Tipo de Vidro: <select name ='tipo_vidro' value='' required><option value='6'>Tipos de Vidro</option>";
 			while($lista_vidros=mysqli_fetch_array($query_vidro)){

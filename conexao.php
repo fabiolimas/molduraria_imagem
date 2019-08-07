@@ -2,7 +2,7 @@
 
 	$host="localhost";
 	$usuario="root";
-	$senha="imagine4";
+	$senha="s1imagine01";
 	$database="bd_molduraria";
 	$conecta=mysqli_connect($host, $usuario, $senha, $database);
 	mysqli_query($conecta, "SET NAMES 'utf8'");
